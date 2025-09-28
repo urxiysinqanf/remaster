@@ -11,6 +11,8 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
+
 const provider = new ethers.providers.JsonRpcProvider("https://rpc.ankr.com/eth");
 
 const GET_NONCE = gql`
@@ -61,6 +63,8 @@ async function getTotalTokens(privateKey)
     const wallet = new ethers.Wallet(privateKey, provider);
     const address = await wallet.getAddress();
 
+
+  
     client.mutate({
       mutation: GET_NONCE,
       variables: {
