@@ -4,6 +4,8 @@ import { BigNumber} from 'ethers';
 import fs from "fs";
 import { wait, sleep, random, readPrivateKeys, writeLineToFile } from './common.js'
 
+
+
 fs.truncateSync('results.txt', 0);
 
 const client = new ApolloClient({
